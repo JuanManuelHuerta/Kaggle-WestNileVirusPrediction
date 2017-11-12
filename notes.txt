@@ -1,0 +1,2 @@
+ grep  "2013-" train.csv  > test.v02.csv 
+ grep  -v "2013-" train.csv  > train.v02.csv 
