@@ -7,6 +7,12 @@ from scipy import spatial
 
 
 
+'''
+
+This model integrates month, species and nearest neighbor prior density.
+
+'''
+
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')
 

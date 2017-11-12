@@ -8,6 +8,12 @@ import csv
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')
 
+'''
+This is the first Logistic Regression approach
+'''
+
+## Mapper for dummy variables (categorical to dummy)
+
 f_matrix= [['Species',"CULEX PIPIENS",0],
            ['Species',"CULEX PIPIENS/RESTUANS",1],
            ['Species',"CULEX RESTUANS",2],

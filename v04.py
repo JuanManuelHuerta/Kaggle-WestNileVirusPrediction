@@ -6,7 +6,11 @@ import csv
 from scipy import spatial
 
 
+'''
 
+This is the improvement on the Logistic Regression approach including a tree-construction that is used to find the nearest neighbors.
+
+'''
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')
 
@@ -40,6 +44,9 @@ for line in csv.reader(fp):
     train_label.append(int(line[header_1['WnvPresent']]))
     coords.append([float(line[header_1['Latitude']])/0.9335,float(line[header_1['Longitude']])])
 fp.close()
+
+#Construct the KD Tree to help us find neighbors within a radius
+
 
 tree = spatial.KDTree(coords)
 

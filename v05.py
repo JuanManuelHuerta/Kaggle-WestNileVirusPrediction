@@ -4,6 +4,11 @@ from KS import compute_KS
 from sklearn.metrics import roc_auc_score
 import csv
 
+'''
+Integration of the month information; categorical to dummy
+
+'''
+
 
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')

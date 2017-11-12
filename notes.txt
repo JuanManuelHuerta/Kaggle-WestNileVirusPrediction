@@ -1,2 +1,47 @@
  grep  "2013-" train.csv  > test.v02.csv 
  grep  -v "2013-" train.csv  > train.v02.csv 
+
+
+
+Performance:
+
+
+Juans-MacBook-Air:src juanhuerta$ time python v02.py
+Random Forest Classifier
+Number of samples: 2392 2392
+AUC 0.739039814057
+
+...
+
+
+real	0m7.476s
+user	0m10.893s
+sys	0m1.023s
+Juans-MacBook-Air:src juanhuerta$ time python v03.py
+Logistic Regression Classifier
+AUC 0.662497789404
+
+real	0m1.373s
+user	0m0.361s
+sys	0m0.232s
+Juans-MacBook-Air:src juanhuerta$ time python v04.py
+Logistic Regression Classifier
+AUC 0.669242294978
+
+real	2m3.037s
+user	1m59.345s
+sys	0m1.230s
+Juans-MacBook-Air:src juanhuerta$ time python v05.py
+Logistic Regression Classifier
+AUC 0.746447984422
+
+real	0m2.095s
+user	0m0.430s
+sys	0m0.341s
+Juans-MacBook-Air:src juanhuerta$ time python v06.py
+Logistic Regression Classifier
+AUC 0.749050172281
+
+real	2m13.902s
+user	2m6.282s
+sys	0m1.807s

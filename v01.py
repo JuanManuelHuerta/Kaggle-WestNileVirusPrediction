@@ -4,6 +4,11 @@ import csv
 import datetime
 
 
+'''
+This script is just to get the ball rolling in terms or reading the csv data
+'''
+
+
 #fp=open('../input/train.csv','rt')
 #h=fp.readline()
 #print h

@@ -4,6 +4,11 @@ from sklearn import ensemble, preprocessing
 from KS import compute_KS
 from sklearn.metrics import roc_auc_score
 
+'''
+This script is the Baseline system
+it uses a large set of variables. It's based on the modified data partition (keeping 2013 for OOT).
+'''
+
 
 # Load dataset 
 train = pd.read_csv('../input/train.v02.csv')
