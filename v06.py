@@ -4,7 +4,7 @@ from KS import compute_KS
 from sklearn.metrics import roc_auc_score
 import csv
 from scipy import spatial
-
+from featurization import featurize
 
 
 '''
@@ -15,7 +15,7 @@ This model integrates month, species and nearest neighbor prior density.
 
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')
-
+'''
 f_matrix= [['Species',"CULEX PIPIENS",0],
            ['Species',"CULEX PIPIENS/RESTUANS",1],
            ['Species',"CULEX RESTUANS",2],
@@ -51,7 +51,7 @@ def featurize(l,h,d):
     return v+v2
 
 
-
+'''
 
 fp = open('../input/train.v02.csv')
 h1=fp.readline().replace("\"","").rstrip().split(",")

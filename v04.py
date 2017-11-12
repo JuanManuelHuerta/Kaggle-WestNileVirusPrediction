@@ -4,7 +4,7 @@ from KS import compute_KS
 from sklearn.metrics import roc_auc_score
 import csv
 from scipy import spatial
-
+from featurization import featurize
 
 '''
 
@@ -13,7 +13,7 @@ This is the improvement on the Logistic Regression approach including a tree-con
 '''
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')
-
+'''
 f_matrix= [['Species',"CULEX PIPIENS",0],
            ['Species',"CULEX PIPIENS/RESTUANS",1],
            ['Species',"CULEX RESTUANS",2],
@@ -29,7 +29,7 @@ def featurize(l,h):
             v[line[2]]=1.0
     return v
 
-
+'''
 
 
 fp = open('../input/train.v02.csv')
@@ -56,7 +56,7 @@ for line in train_raw:
         density=float(sum([train_label[x] for x in v]))/len(v)
     else:
         density=0.0
-    train.append(featurize(line,header_1)+[density])
+    train.append(featurize(line,header_1,{})+[density])
 
 
 
@@ -76,7 +76,7 @@ for line in csv.reader(fp):
         density=float(sum([train_label[x] for x in v]))/len(v)
     else:
         density=0.0
-    test.append(featurize(line,header_2)+[density])
+    test.append(featurize(line,header_2,{})+[density])
     test_label.append(int(line[header_2['WnvPresent']]))
 fp.close()
 

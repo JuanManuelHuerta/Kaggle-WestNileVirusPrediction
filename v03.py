@@ -3,7 +3,7 @@ from sklearn import ensemble, preprocessing, linear_model
 from KS import compute_KS
 from sklearn.metrics import roc_auc_score
 import csv
-
+from featurization import featurize
 
 # Load dataset 
 #weather = pd.read_csv('../input/weather.csv')
@@ -13,7 +13,7 @@ This is the first Logistic Regression approach
 '''
 
 ## Mapper for dummy variables (categorical to dummy)
-
+'''
 f_matrix= [['Species',"CULEX PIPIENS",0],
            ['Species',"CULEX PIPIENS/RESTUANS",1],
            ['Species',"CULEX RESTUANS",2],
@@ -29,7 +29,7 @@ def featurize(l,h):
             v[line[2]]=1.0
     return v
 
-
+'''
 
 
 fp = open('../input/train.v02.csv')
